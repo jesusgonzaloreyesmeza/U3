@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+  	<meta name="description" content="PQG">
+  	<meta name="keywords" content="">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Función básica</title>
+</head>
+<link rel="stylesheet" type="text/css" href="par.css" >
+<body>
+  <DIV id="Barra" ALIGN="right"> <a href="../Gonzalo.html"> Regresar a menú de actividades</a> </DIV>
+	<h1>Verifica si un número es par o impar.</h1>
+
+	<form>
+		<label>Ingresa el número</label>
+		<input type="text" id="numero" value="">
+		<button type="button" onclick="Par(numero)">Verificar</button>
+    </form>
+
+    <script type="text/javascript">
+    	function Par(numero){
+    		num = parseInt(document.getElementById("numero").value);
+    		var resultado = parImpar(numero);
+    		alert("El numero "+parseInt(document.getElementById("numero").value)+" es "+resultado);
+    	}
+
+    	function parImpar(numero){
+    		if (numero%2==0)
+    			return "par";
+    		else return "impar";
+    	}
+    </script>
+
+</body>
+</html>

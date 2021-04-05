@@ -1,0 +1,28 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #00FCFC;
+  width: 50%;
+  max-width: 800px;
+  min-width: 480px;
+  margin: 0 auto;
+}
+
+.ultimoResultado {
+  color: blanchedalmond;
+  padding: 3px;
+}
+
+.tabla{
+  border: solid 1px;
+  margin-top: 20px;
+  background-color: #F4D03F;
+  padding: 3px;
+}
+
+#Barra a{
+  font-size: 20px;
+  color: black;
+}

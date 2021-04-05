@@ -1,0 +1,33 @@
+body{
+	font-family: arial, helvetica;
+	background: #e8e8e8;
+}
+.barra{
+	list-style: none;
+	padding: 0;
+	background: #092327;
+	width: 120%;
+	max-width: 1100px;
+	margin: auto;
+}
+.barra li a{
+	text-decoration: none;
+	color: white;
+	padding: 20px;
+	display: block;
+}
+.barra li{
+	display: inline-block;
+	text-align: center;
+}
+.barra li a:hover{
+	background: #ef8354;
+}
+h1{
+	text-align: center;
+	color: red;
+}
+h2{
+	text-align: center;
+	color: blue;
+}

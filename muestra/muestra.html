@@ -1,0 +1,83 @@
+<!DOCTYPE>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<style type="text/css">
+  #Barra a{
+  font-size: 25px;
+  color: black;
+}
+</style>
+<title>Muestra Oculta parrafos</title>
+
+<script type="text/javascript">
+function muestraOculta(id) {
+  var elemento = document.getElementById('contenidos_'+id);
+  var enlace = document.getElementById('enlace_'+id);
+   switch(id){
+    case '1': document.getElementById('barra1').style="background-color: #F5EE0C;"; break;
+    case '2': document.getElementById('barra2').style="background-color: #E70CF5;"; break;
+    case '3': document.getElementById('barra3').style="background-color: #82E0AA;"; break;
+  }
+
+  if(elemento.style.display == "" || elemento.style.display == "block") {
+    elemento.style.display = "none";
+    enlace.innerHTML = 'Mostrar contenidos';
+  }
+  else {
+    elemento.style.display = "block";
+    enlace.innerHTML = 'Ocultar contenidos';
+  }
+}
+
+</script>
+</head>
+
+<body>
+<div id="barra1">
+<p id="contenidos_1">[1] Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue,
+  commodo nec, commodo ultricies, turpis.
+  Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
+  Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede.
+  Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper
+  quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing
+  ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor.
+ </p>
+</div>
+  <a id="enlace_1" href="#" onclick="muestraOculta('1'); return false;">
+    Ocultar contenidos
+  </a>
+
+<br/>
+<div id="barra2">
+<p id="contenidos_2">[2] Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec,
+   commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede.
+   Pellentesque massa ante, ornare id, aliquam vitae, ultrices porttitor, pede. Nullam sit amet
+   nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus non,
+   mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at posuere ante
+   quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.
+ </p>
+</div>
+<a id="enlace_2" href="#" onclick="muestraOculta('2'); return false;">
+  Ocultar contenidos
+</a>
+
+<br/>
+<div id="barra3">
+<p id="contenidos_3">[3] Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae
+  rci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis.
+  Quisque sapien nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+  aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada.
+  Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing
+  ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet,
+  consectetuer adipiscing elit. Duis scelerisque.
+</p>
+</div>
+<a id="enlace_3" href="#" onclick="muestraOculta('3'); return false;">
+  Ocultar contenidos
+</a>
+  <DIV id="Barra" ALIGN="right"> <a href="../Gonzalo.html"> Regresar a menú de actividades</a> </DIV>
+</body>
+</html>

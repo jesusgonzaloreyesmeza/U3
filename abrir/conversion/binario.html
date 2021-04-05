@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+  	<meta name="description" content="PQG">
+  	<meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Conversión Binario</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css/binario.css" >
+
+<body>
+	<h1>Convertir un número decimal a binario.</h1>
+    
+    <form>
+    	<label>Introduce un número</label>
+    	<input type="text" id="num" name="numero" value="">
+        <button id="button" type="button" onclick="Conbinario(num.value)">Binario</button>
+        <button id="button" type="button" onclick="nuevo()">Limpiar todo</button>
+        <input id="button" type="button" onClick="cierra();" value="Cerrar"/>
+    </form>
+
+   <script type="text/javascript">
+   	    function Conbinario(numero){
+    	  if (document.getElementById("num").value!="") {
+    	        var resultado = numBina(numero);
+          		parrafo = document.createElement("p");
+          		contenido = document.createTextNode("El número "+numero+" en binario es "+resultado);  
+          		parrafo.appendChild(contenido);
+          		document.body.appendChild(parrafo);
+          		document.getElementById("num").value="";
+            }
+           else alert("Introduzca un número para Convertir a binartio");
+        }
+       
+       //*Operacion a binario//
+   	    function numBina(numero){
+   	      var binario="";
+   	       while(numero>0){
+   	 	   binario=numero%2+binario;
+   	 	   numero=Math.floor(numero/2);
+   	      }
+   	       return binario;
+        }
+        
+        //Limpiar todo
+        function nuevo(){
+            lista=document.querySelectorAll('p');
+            if(lista.length!=0){
+               i=lista.length-1;  
+               while(i>-1)
+               lista[i].parentNode.removeChild(lista[i--]);
+            }
+            else alert("No hay párrafos a eliminar");
+        }
+        
+        //Cerrar
+        function cierra(){
+		   if (confirm("¿Quieres cerrar la ventana?")){
+			   window.close();
+		    }
+	    }
+   </script>
+</body>
+</html>

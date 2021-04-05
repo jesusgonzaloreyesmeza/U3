@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="PQG">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Conversiones</title>
+</head>
+<link rel="stylesheet" type="text/css" href="conversion.css" >
+<body>
+      <DIV id="Barra" ALIGN="right"> <a href="../Gonzalo.html"> Regresar a menú de actividades</a> </DIV>
+	<h1>Convertir un número decimal a binario o hexadecimal.</h1>
+    <form>
+    	<label>Introduce un número</label>
+    	<input type="text" id="num" name="numero" value="">
+        <button type="button" onclick="Conbinario(num.value)">Binario</button>
+        <button type="button" onclick="Conhexadecimal(num.value)">Hexadecimal</button>
+        <button type="button" onclick="nuevo()">Limpiar todo</button>
+    </form>
+
+    <script type="text/javascript">
+    //Funcion de binario
+    function Conbinario(numero){
+    	if (document.getElementById("num").value!="") {
+    	  var resultado = numBina(numero);
+          parrafo = document.createElement("p");
+          contenido = document.createTextNode("El número "+numero+" en binario es "+resultado);  
+          parrafo.appendChild(contenido);
+          document.body.appendChild(parrafo);
+          document.getElementById("num").value="";
+       }
+       else alert("Introduzca un número para Convertir a binario");
+    }
+    //*Operacion a binario//
+   function numBina(numero){
+   	 var binario="";
+   	 while(numero>0){
+   	 	binario=numero%2+binario;
+   	 	numero=Math.floor(numero/2);
+   	 }
+   	 return binario;
+   }
+
+   //Funcion de hexadecimal
+    function Conhexadecimal(numero){
+    	if (document.getElementById("num").value!="") {
+    	  var resultado = numHexa(numero);
+          parrafo = document.createElement("p");
+          contenido = document.createTextNode("El número "+numero+" en hexadecimal es "+resultado);  
+          parrafo.appendChild(contenido);
+          document.body.appendChild(parrafo);
+          document.getElementById("num").value="";
+       }
+       else alert("Introduzca un número para Convertir a hexadecimal");
+    }
+
+    function numHexa(numero){
+    	var hexa=[], i;
+    	for (i=numero; i>0; i=parseInt(i/16)) {
+    		hexa.push(i%16);
+    	}
+    	for (i=0; i<hexa.length; i++) {
+            switch(hexa[i]){
+    		case 10: hexa[i]="A"; break;
+    		case 11: hexa[i]="B"; break;
+    		case 12: hexa[i]="C"; break;
+    		case 13: hexa[i]="D"; break;
+    		case 14: hexa[i]="E"; break;
+    		case 15: hexa[i]="F"; break;
+    	   }
+       }
+    	return hexa.reverse().join("");
+    }
+
+
+    function nuevo(){
+    lista=document.querySelectorAll('p');
+    if(lista.length!=0){
+        i=lista.length-1;
+        while(i>-1)
+             lista[i].parentNode.removeChild(lista[i--]);
+    }
+       else alert("No hay párrafos a eliminar");
+    }
+
+</script>
+</body>
+</html>

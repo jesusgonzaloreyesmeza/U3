@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+  	<meta name="description" content="PQG">
+  	<meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ventana que abre</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/abrir.css" >
+
+<body>
+		<DIV id="Barra" ALIGN="right"> <a href="../Gonzalo.html"> Regresar a menú de actividades</a> </DIV>
+	<h1>Elige la conversión que vas a utilizar.</h1>
+	<form >
+		<input id="button" type="button" onClick="bina();" value="Binario"/>
+		<input id="button" type="button" onClick="hexa();" value="Hexadecimal"/>
+    </form>
+    <script type="text/javascript" >
+		function bina(){
+			window.open('conversion/binario.html','','toolbar=no, status=no, resizable');
+		}
+		function hexa(){
+			window.open('conversion/hexadecimal.html','','toolbar=no, status=no, resizable');
+		}
+	</script>
+
+
+</body>
+</html>
